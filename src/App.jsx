@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import avatarImg from './assets/logo2.png'
+import avatarImg from './assets/image.jpg'
 import FadeInSection from './FadeInSection'
 
 const pages = [
@@ -58,20 +58,12 @@ function App() {
 						<FadeInSection>
 							<section className="about" id="about">
 								<h2>About Me</h2>
-								<div className="aboutme-section">
-									<div className="aboutme-photo">
-										<img
-											src={avatarImg}
-											alt="About Me"
-											className="aboutme-img"
-										/>
-									</div>
-									<div className="aboutme-text">
-										<p>
-											Hi! I'm Gonzalo Romero Bernal, a passionate developer focused on creating modern, functional, and scalable web applications. I enjoy learning new technologies and working in teams to achieve the best results.
-										</p>
-									</div>
-								</div>
+								<p>
+									I am a passionate developer focused on creating modern, functional, and scalable web applications.
+									<span className={`about-more${showMore ? ' show' : ''}`}>
+										I have experience with Kotlin, Python, JavaScript, CSS, and tools like Git. I enjoy learning new technologies and working in teams to achieve the best results.
+									</span>
+								</p>
 								<button onClick={() => setShowMore(!showMore)}>
 									{showMore ? 'Show less' : 'Show more'}
 								</button>
@@ -113,8 +105,17 @@ function App() {
 									<li>
 										<strong>Codewise Reviewer</strong> – AI-powered code review application.{' '}
 										<a href="https://github.com/gromber05/codewise-reviewer" target="_blank" rel="noopener noreferrer">View code</a>
+										<div className="project-langs">
+											<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" className="project-lang-icon" />
+										</div>
 									</li>
-									{/* Add more projects here */}
+									<li>
+										<strong>Discord bots</strong> – I have developed and maintained several Discord bots using Python, automating server management, moderation, and entertainment features for different communities. These bots integrate APIs, custom commands, and event-driven logic, demonstrating my skills in Python, asynchronous programming, and deploying scalable solutions.{' '}
+										<a href="https://github.com/gromber05/codewise-reviewer" target="_blank" rel="noopener noreferrer">View code</a>
+										<div className="project-langs">
+											<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" className="project-lang-icon" />
+										</div>
+									</li>
 								</ul>
 							</section>
 						</FadeInSection>
@@ -124,12 +125,51 @@ function App() {
 						<FadeInSection>
 							<section className="contact" id="contact">
 								<h2>Contact</h2>
-								<p>
-									<strong>Email:</strong> <a href="mailto:gonzalorbac@gmail.com">gonzalorbac@gmail.com</a>
-								</p>
-								<div className="social-links">
-									<a href="https://github.com/gromber05" target="_blank" rel="noopener noreferrer">GitHub</a>
-									<a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+								<form
+									className="contact-form"
+									onSubmit={e => {
+										e.preventDefault()
+										
+										
+									}}
+								>
+									<label>
+										Name
+										<input type="text" name="name" required autoComplete="off" />
+									</label>
+									<label>
+										Email
+										<input type="email" name="email" required autoComplete="off" />
+									</label>
+									<label>
+										Message
+										<textarea name="message" rows={4} required />
+									</label>
+									<button type="submit">Send Message</button>
+								</form>
+	
+								<div className="contact-icons">
+									<a
+										href="https://github.com/gromber05"
+										target="_blank"
+										rel="noopener noreferrer"
+										title="GitHub"
+									>
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+									</a>
+									<a
+										href="https://linkedin.com/in/tuusuario"
+										target="_blank"
+										rel="noopener noreferrer"
+										title="LinkedIn"
+									>
+										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+									</a>
+									<a 
+										href="mailto:gonzalorbac@gmail.com" 
+									>
+										<img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email" className="contact-email-icon" />
+									</a>
 								</div>
 							</section>
 						</FadeInSection>
