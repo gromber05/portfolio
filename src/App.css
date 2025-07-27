@@ -241,3 +241,16 @@ footer {
   max-height: 200px; /* Ajusta según el contenido */
   opacity: 1;
 }
+
+/* Animación de aparición desde abajo */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

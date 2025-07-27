@@ -1,12 +1,38 @@
-# React + Vite
+# Portfolio - Gonzalo Romero Bernal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portfolio personal desarrollado con **React** y **Vite**. Aquí muestro información sobre mí, mis proyectos destacados y formas de contacto, todo con un diseño moderno, responsivo y animaciones suaves.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navegación entre secciones: Sobre mí, Proyectos y Contacto.
+- Transiciones animadas entre páginas.
+- Sección de habilidades con logos de tecnologías.
+- Diseño profesional y adaptable a dispositivos móviles.
+- Código limpio y fácil de mantener.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [CSS moderno](https://developer.mozilla.org/es/docs/Web/CSS)
+- [Devicon](https://devicon.dev/) para los iconos de habilidades
+
+## Instalación y uso
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/portfolio.git
+   cd portfolio
+   ```
+
+2. Ubica el repositorio en la terminal
+
+    ```bash
+    cd ruta/al/repositorio
+    ```
+
+3. Inicia el repositorio desde npm:
+
+    ```bash
+    npm run dev
+    ```
