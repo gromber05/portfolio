@@ -42,12 +42,14 @@
 }
 
 .portfolio-container {
-  max-width: 800px;
+  width: 800px;         /* Fijo, igual para todas las páginas */
+  max-width: 100vw;     /* Para que no desborde en pantallas pequeñas */
   margin: 2rem auto;
   background: #181818;
   border-radius: 18px;
   box-shadow: 0 4px 32px #00000030;
   padding: 2.5rem 2rem 1.5rem 2rem;
+  box-sizing: border-box;
 }
 
 .portfolio-header {
@@ -178,6 +180,13 @@ section {
   .skill-logo img {
     width: 28px;
     height: 28px;
+  }
+}
+
+@media (max-width: 850px) {
+  .portfolio-container {
+    width: 100%;
+    min-width: 0;
   }
 }
 
