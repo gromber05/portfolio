@@ -116,6 +116,13 @@ function App() {
 											<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" className="project-lang-icon" />
 										</div>
 									</li>
+									<li>
+										<strong>Password unit</strong> .{' '}
+										<a href="https://github.com/gromber05/codewise-reviewer" target="_blank" rel="noopener noreferrer">View code</a>
+										<div className="project-langs">
+											<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" className="project-lang-icon" />
+										</div>
+									</li>
 								</ul>
 							</section>
 						</FadeInSection>
