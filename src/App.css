@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+body {
+  background: url('https://ccnyplanetarium.org/assets/images/jupiter-saturn-conjunction-2020-nyc.gif');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

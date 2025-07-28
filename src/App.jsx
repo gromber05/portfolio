@@ -125,6 +125,9 @@ function App() {
 						<FadeInSection>
 							<section className="contact" id="contact">
 								<h2>Contact</h2>
+								<p>
+									If you have any questions, want to collaborate, or just want to say hello, feel free to reach out using the form below. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions. I will do my best to respond as soon as possible!
+								</p>
 								<form
 									className="contact-form"
 									onSubmit={e => {
@@ -165,9 +168,12 @@ function App() {
 										<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
 									</a>
 									<a 
-										href="mailto:gonzalorbac@gmail.com" 
+										href="mailto:gonzalorbac@gmail.com"
+										target="_blank"
+										rel="noopener noreferrer"
+										title="Email" 
 									>
-										<img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email" className="contact-email-icon" />
+										<img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email" />
 									</a>
 								</div>
 							</section>
