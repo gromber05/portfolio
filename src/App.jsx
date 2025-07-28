@@ -130,7 +130,6 @@ function App() {
 									onSubmit={e => {
 										e.preventDefault()
 										
-										
 									}}
 								>
 									<label>
