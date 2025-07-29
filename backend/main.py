@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -23,4 +23,7 @@ POSTS = [
 
 @app.get("/api/posts")
 def get_posts():
-    return POSTS
+    try:
+        return POSTS
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving posts: {str(e)}")
