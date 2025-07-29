@@ -43,7 +43,7 @@ export default function Contact() {
 						/>
 					</a>
 					<a
-						href="https://linkedin.com/in/tuusuario"
+						href="https://www.linkedin.com/in/gonzalo-romero-bernal-72985633b/"
 						target="_blank"
 						rel="noopener noreferrer"
 						title="LinkedIn"
