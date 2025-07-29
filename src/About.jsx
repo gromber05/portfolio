@@ -54,7 +54,7 @@ export default function About() {
         </section>
         <section className="about-posts">
           <h2>Recent Posts</h2>
-          {posts.length === 0 && <p>Loading posts...</p>}
+          {posts.length === 0 && <p>No posts avaible...</p>}
           <ul>
             {posts.map(post => (
               <li key={post.id} className="about-post">

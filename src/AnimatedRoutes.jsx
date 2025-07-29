@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
+import AdminPanel from './AdminPanel'
 
 export default function AnimatedRoutes() {
   const location = useLocation()
@@ -67,6 +68,7 @@ export default function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/adminpanel" element={<AdminPanel />} />
         <Route
           path="*"
           element={

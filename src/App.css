@@ -562,3 +562,57 @@ footer {
 .about-post p {
   margin: 0.7em 0 0 0;
 }
+
+/* AdminPanel styles */
+.admin-panel-form {
+  background: #232323;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 2em 2em 1.5em 2em;
+  max-width: 420px;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.admin-panel-form input,
+.admin-panel-form textarea {
+  border: 1px solid #646cff44;
+  border-radius: 7px;
+  padding: 0.7em;
+  background: #181818;
+  color: #fff;
+  font-size: 1em;
+  resize: vertical;
+  margin-top: 0.2em;
+}
+
+.admin-panel-form input:focus,
+.admin-panel-form textarea:focus {
+  outline: 2px solid #646cff;
+  border-color: #646cff;
+}
+
+.admin-panel-form button {
+  margin-top: 0.7em;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7em 1.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.admin-panel-form button:hover {
+  background: #4b4be7;
+}
+
+.admin-panel-form div {
+  margin-top: 0.7em;
+  color: #bdbdbd;
+  font-size: 1em;
+  text-align: center;
+}

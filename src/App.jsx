@@ -5,15 +5,17 @@ import avatarImg from './assets/image.jpg'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
+import AdminPanel from './AdminPanel'
 import AnimatedRoutes from './AnimatedRoutes'
 
 const pages = [
 	{ id: 'about', label: 'About Me', path: '/about' },
 	{ id: 'projects', label: 'Projects', path: '/projects' },
-	{ id: 'contact', label: 'Contact', path: '/contact' }
+	{ id: 'contact', label: 'Contact', path: '/contact' },
+	{ id: 'adminpanel', label: 'Post', path: '/adminpanel'}
 ]
 
-const validPaths = ['/about', '/projects', '/contact', '/']
+const validPaths = ['/about', '/projects', '/contact', '/', '/adminpanel']
 
 function App() {
 	const location = useLocation()
