@@ -13,7 +13,6 @@ export default function AdminPanel() {
 
   const handleLogin = async (e) => {
     e.preventDefault()
-    // Intenta hacer una petición protegida con el token
     const res = await fetch("http://localhost:8000/api/posts", {
       headers: { "Authorization": `Bearer ${inputToken}` }
     })

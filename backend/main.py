@@ -5,21 +5,20 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Carga variables de entorno desde un archivo .env si existe
+load_dotenv()
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # O pon ["http://localhost:5173"] para más seguridad
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Si el archivo token.env está en la carpeta raíz del proyecto, carga explícitamente desde allí:
 load_dotenv(dotenv_path=Path(__file__).parent.parent / "token.env")
-ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")  # Usa variable de entorno o valor por defecto
+ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
 
 POSTS_FILE = Path(__file__).parent / "posts.json"
 
