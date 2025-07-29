@@ -1,6 +1,5 @@
 import FadeInSection from './FadeInSection'
 import './App.css'
-import { useState } from 'react'
 
 export default function Contact() {
 	return (
@@ -10,25 +9,26 @@ export default function Contact() {
 				<p>
 					If you have any questions, want to collaborate, or just want to say hello, feel free to reach out using the form below. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions. I will do my best to respond as soon as possible!
 				</p>
+
 				<form
 					className="contact-form"
-					onSubmit={e => {
-						e.preventDefault()
-					}}
-				>
-					<label>
-						Name
-						<input type="text" name="name" required autoComplete="off" />
+					action="https://formspree.io/f/xanbjprv"
+					method="POST"
+					>
+						<h2>Contact form</h2>
+						<label>
+						Your name:
+						<input name="name" required autoComplete="off" />
 					</label>
 					<label>
-						Email
+						Your email:
 						<input type="email" name="email" required autoComplete="off" />
 					</label>
 					<label>
-						Message
-						<textarea name="message" rows={4} required />
+						Your message:
+						<textarea name="message" required rows={4} />
 					</label>
-					<button type="submit">Send Message</button>
+					<button type="submit">Send</button>
 				</form>
 				<div className="contact-icons">
 					<a

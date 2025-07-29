@@ -261,6 +261,7 @@ footer {
   transform: translateY(0);
 }
 
+/* Contact Form Styles */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -520,4 +521,44 @@ footer {
 .route-fade-exit {
   opacity: 0;
   transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.about-posts {
+  margin-top: 2em;
+}
+.about-posts ul {
+  list-style: none;
+  padding: 0;
+}
+.about-post {
+  background: #232323;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 1.2em 1.5em;
+  margin-bottom: 1.5em;
+  transition: 
+    box-shadow 0.18s,
+    transform 0.18s,
+    border-color 0.18s,
+    background 0.18s;
+  border: 1.5px solid #232333;
+}
+
+.about-post:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 24px #646cff44;
+  border-color: #646cff;
+}
+
+.about-post h3 {
+  margin: 0 0 0.3em 0;
+  color: #646cff;
+}
+
+.about-post small {
+  color: #aaa;
+  font-size: 0.95em;
+}
+.about-post p {
+  margin: 0.7em 0 0 0;
 }

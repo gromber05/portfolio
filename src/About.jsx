@@ -1,10 +1,18 @@
 import avatarImg from './assets/image.jpg'
 import FadeInSection from './FadeInSection'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 export default function About() {
   const [showMore, setShowMore] = useState(false)
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8000/api/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data))
+  }, [])
+
   return (
     <FadeInSection>
       <section className="about" id="about">
@@ -43,6 +51,19 @@ export default function About() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
             </div>
           </div>
+        </section>
+        <section className="about-posts">
+          <h2>Recent Posts</h2>
+          {posts.length === 0 && <p>Loading posts...</p>}
+          <ul>
+            {posts.map(post => (
+              <li key={post.id} className="about-post">
+                <h3>{post.title}</h3>
+                <small>{post.date}</small>
+                <p>{post.content}</p>
+              </li>
+            ))}
+          </ul>
         </section>
       </section>
     </FadeInSection>

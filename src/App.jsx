@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import avatarImg from './assets/image.jpg'
 import About from './About'
@@ -13,34 +13,40 @@ const pages = [
 	{ id: 'contact', label: 'Contact', path: '/contact' }
 ]
 
+const validPaths = ['/about', '/projects', '/contact', '/']
+
 function App() {
 	const location = useLocation()
+	const is404 = !validPaths.includes(location.pathname)
 	const [showMore, setShowMore] = useState(false)
+	const [msg, setMsg] = useState('')
 
 	return (
 		<div className="portfolio-container">
-			<header className="portfolio-header">
-				<img
-					src={avatarImg}
-					alt="Avatar"
-					className="avatar"
-				/>
-				<div>
-					<h1>Gonzalo Romero Bernal</h1>
-					<p className="subtitle">Studying Multiplatform Application Development</p>
-					<nav>
-						{pages.map((p) => (
-							<Link
-								key={p.id}
-								to={p.path}
-								className={location.pathname === p.path ? 'active' : ''}
-							>
-								{p.label}
-							</Link>
-						))}
-					</nav>
-				</div>
-			</header>
+			{!is404 && (
+				<header className="portfolio-header">
+					<img
+						src={avatarImg}
+						alt="Avatar"
+						className="avatar"
+					/>
+					<div>
+						<h1>Gonzalo Romero Bernal</h1>
+						<p className="subtitle">Studying Multiplatform Application Development</p>
+						<nav>
+							{pages.map((p) => (
+								<Link
+									key={p.id}
+									to={p.path}
+									className={location.pathname === p.path ? 'active' : ''}
+								>
+									{p.label}
+								</Link>
+							))}
+						</nav>
+					</div>
+				</header>
+			)}
 			<main>
 				<AnimatedRoutes />
 			</main>
@@ -52,3 +58,6 @@ function App() {
 }
 
 export default App
+
+
+
