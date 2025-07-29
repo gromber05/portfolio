@@ -512,3 +512,12 @@ footer {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
+
+.route-fade {
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+}
+.route-fade-exit {
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+}
